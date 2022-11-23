@@ -11,8 +11,9 @@ const postTodo = async (req, res) => {
         return res.json({
             err: 'please enter a title and body'
         })
+    } else {
+        return res.json(newTodo)
     }
-    return res.json(newTodo)
 }
 
 module.exports = {
