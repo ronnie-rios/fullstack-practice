@@ -11,8 +11,9 @@ app.use(express.json());
 //mongoose connection
 mongoose.connect('mongodb://localhost/todo-prac');
 
-//express controllers
-
+//routes
+const toDoRoutes = require('./routes/todoRoutes');
+app.use('/todos', toDoRoutes)
 //Express Listener
 const listener = () => {
     console.log(`server on ${port}`);
